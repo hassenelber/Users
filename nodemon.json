@@ -1,0 +1,8 @@
+{
+   "env": {
+      "database": "mongodb+srv://hassenevent:dbhassenevent747@event-9v63l.mongodb.net/user?retryWrites=true&w=majority",
+      "JWT_KEY": "1d2bf3beaa79c0ee49b293b17cd2bc7ca759af95646d7a118e91fecbfb29d12d04d2af5bb55d000960f56d49a3f9749a74688642a0c2a364fa7a8fc532e6a5df",
+      "JWT_KEY_REF": "ffcc95094bc4a2ee347f3ca65d6f919a753d9317d4197a22d3bbf59e716a17e5da56de9f5cadf1e95735b34a8567a0e88a45cf203876ced7878cc28ff87314f8"
+   }
+  
+}
