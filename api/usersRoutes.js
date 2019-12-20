@@ -4,15 +4,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const passport = require("passport");
-
-
-const initializePassport = require("./passport-config");
-initializePassport(
-    passport,
-    email => {
-        users
-    });
 
 const checkAuth = require("../middleware/check-auth");
 
@@ -164,7 +155,7 @@ router.post('/login', (req, res, next) => {
                     });
                 }
                 if (response) {
-
+                    //synch accessToken
                     const accessToken = jwt.sign(
                         {
                             email: user.email,
@@ -174,7 +165,7 @@ router.post('/login', (req, res, next) => {
                         {
                             expiresIn: "20m"
                         });
-
+                        //synch refreshToken
                     const refreshToken = jwt.sign(
                         {
                             email: user.email,
